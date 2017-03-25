@@ -1,3 +1,5 @@
+#!/bin/bash
+
 iproute2_dir=/tmp/iptables
 output_dir=pdfs
 
