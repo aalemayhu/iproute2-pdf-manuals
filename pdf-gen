@@ -1,0 +1,11 @@
+iproute2_dir=/tmp/iptables
+output_dir=pdfs
+
+cp -r $iproute2_dir/man/ man
+mkdir -pv $output_dir
+for page in `find man -type f|grep -v gitignore|grep -v Makefile`
+do
+  filename=`basename -s .8 $page`.pdf 
+  echo "$page => $filename"
+  man -t $page | ps2pdf - > $output_dir/$filename
+done
