@@ -1,6 +1,6 @@
 #!/bin/bash
 
-iproute2_dir=/tmp/iptables
+iproute2_dir=~/src/kernel.org/shemminger/iproute2
 output_dir=pdfs
 
 function toPDF()
